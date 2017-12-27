@@ -18,6 +18,8 @@ LIBRARY_IOC += asynSPIDriver
 # specify all source files to be compiled and added to the library
 asynSPIDriver_SRCS += asynSPIDriver.cpp
 
+INC += asynSPIDriver.h
+
 asynSPIDriver_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #===========================
