@@ -138,7 +138,7 @@ asynStatus asynSPIDriver::spi_disconnect(asynUser* pasynUser)
 int asynSPIDriver::spi_wr_rd(unsigned char* tx, unsigned char* rx,
                              unsigned short n)
 {
-    struct spi_ioc_transfer tr;
+    struct spi_ioc_transfer tr = {0};
 
     tr.tx_buf        = (unsigned long)tx;
     tr.rx_buf        = (unsigned long)rx;
